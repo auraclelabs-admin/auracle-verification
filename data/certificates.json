@@ -9,6 +9,16 @@
       "status": "Valid",
       "issued_by": "Auracle Labs (Partnership Firm, PAN: XXXXX1234X)",
       "verified_on": "2025-12-11"
+    },
+    {
+      "id": "AL-2025-INT-004",
+      "name": "Agniva Sardar",
+      "role": "Full-Stack Developer",
+      "start_date": "2025-10-01",
+      "end_date": "2025-12-31",
+      "status": "Valid",
+      "issued_by": "Auracle Labs",
+      "verified_on": "2025-12-11"
     }
   ]
 }
