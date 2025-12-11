@@ -1,0 +1,14 @@
+{
+  "certificates": [
+    {
+      "id": "AL-2025-INT-001",
+      "name": "Demo Student",
+      "role": "AI Intern",
+      "start_date": "2025-01-10",
+      "end_date": "2025-03-10",
+      "status": "Valid",
+      "issued_by": "Auracle Labs (Partnership Firm, PAN: XXXXX1234X)",
+      "verified_on": "2025-12-11"
+    }
+  ]
+}
