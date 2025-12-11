@@ -1,19 +1,14 @@
 {
   "certificates": [
     {
-      "id": "AL-2025-INT-001",
-      "name": "Demo Student",
-      "role": "AI Intern",
-      "start_date": "2025-01-10",
-      "end_date": "2025-03-10",
-      "status": "Valid",
-      "issued_by": "Auracle Labs (Partnership Firm, PAN: XXXXX1234X)",
-      "verified_on": "2025-12-11"
-    },
-    {
-      "id": "AL-2025-INT-004",
+      "id": "AL-2025-TECH-AI-001",
       "name": "Agniva Sardar",
-      "role": "Full-Stack Developer",
+      "role": "Full-Stack Developer Intern",
+      "family": "TECH",
+      "subdivision": "AI",
+      "country": "India",
+      "zone_code": "SZ",
+      "zone_label": "South Zone",
       "start_date": "2025-10-01",
       "end_date": "2025-12-31",
       "status": "Valid",
