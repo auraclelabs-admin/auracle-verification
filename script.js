@@ -26,12 +26,38 @@ async function verifyCert(prefilledId) {
         );
 
         if (cert) {
+            // Build optional division/region lines
+            let divisionLine = "";
+            if (cert.family || cert.subdivision) {
+                const fam = cert.family || "-";
+                const sub = cert.subdivision ? ` / ${cert.subdivision}` : "";
+                divisionLine = `<p><strong>Division:</strong> ${fam}${sub}</p>`;
+            }
+
+            let regionLine = "";
+            if (cert.country || cert.zone_code || cert.zone_label) {
+                const country = cert.country || "";
+                const zoneLabel = cert.zone_label || "";
+                const zoneCode = cert.zone_code || "";
+                let regionText = country;
+                if (zoneLabel) {
+                    regionText += regionText ? ` – ${zoneLabel}` : zoneLabel;
+                } else if (zoneCode) {
+                    regionText += regionText ? ` (${zoneCode})` : zoneCode;
+                }
+                if (regionText) {
+                    regionLine = `<p><strong>Region:</strong> ${regionText}</p>`;
+                }
+            }
+
             resultBox.innerHTML = `
                 <div class='card'>
                     <h3>Certificate Found ✔️</h3>
                     <p><strong>Certificate ID:</strong> ${cert.id}</p>
                     <p><strong>Name:</strong> ${cert.name}</p>
-                    <p><strong>Role:</strong> ${cert.role}</p>
+                    ${cert.role ? `<p><strong>Role:</strong> ${cert.role}</p>` : ""}
+                    ${divisionLine}
+                    ${regionLine}
                     <p><strong>Period:</strong> ${cert.start_date} to ${cert.end_date}</p>
                     <p><strong>Status:</strong> ${cert.status}</p>
                     <p><strong>Issued By:</strong> ${cert.issued_by}</p>
